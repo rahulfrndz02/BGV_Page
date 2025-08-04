@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BGV Company - Background Verification</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6fb;
+      color: #222;
+    }
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #001133;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #001133;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #007bff;
+    }
+    .section {
+      padding: 60px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .highlight {
+      color: #007acc;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+    .nav-btn {
+      padding: 10px 18px;
+      background-color: #001133;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #e0e7ff, #f2f6ff);
+    }
+    .hero h1 {
+      font-size: 40px;
+      color: #001133;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #333;
+    }
+    .card {
+      background-color: #002a5c;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .card-light {
+      background-color: #ffffff;
+      color: #001133;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">BGV Experts</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div id="home" class="hero">
+  <h1>Background Checks. Turbocharged</h1>
+  <p>We’ve built advanced background solutions to make hiring faster, smarter, and safer.</p>
+</div>
+
+<div id="about" class="section">
+  <div class="card">
+    <p>We value long-term relationships with our employees, so we ensure that our compensation and benefits are highly competitive at every career stage.</p>
+  </div>
+  <div class="card-light">
+    <p>Our packages are tailored to local labor markets through continuous monitoring of market trends and international best practices. Each package includes a transparent mix of fixed and variable components, both monetary and non-monetary.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Here are some examples of what we offer:</h2>
+  <ul>
+    <li><strong>Work-life balance</strong></li>
+  </ul>
+</div>
+
+<div id="services" class="section hidden">
+  <h2>Our Core Services</h2>
+  <ul>
+    <li><strong>Employment Verification</strong> – Confirm past work history so you hire with confidence.</li>
+    <li><strong>Address Verification</strong> – Validate residential details for complete accuracy.</li>
+    <li><strong>Identity Verification</strong> – Ensure candidates are exactly who they say they are.</li>
+  </ul>
+</div>
+
+<div id="why" class="section hidden">
+  <h2>Why Work With Us?</h2>
+  <ul>
+    <li><strong>Expertise You Can Count On</strong> – Seasoned professionals with deep industry knowledge.</li>
+    <li><strong>Fast Turnaround</strong> – Get the insights you need, when you need them.</li>
+    <li><strong>Absolute Confidentiality</strong> – Your data stays secure, always.</li>
+  </ul>
+  <p class="highlight">We’re here to make your hiring decisions easier, safer, and smarter. Let’s build trust together.</p>
+</div>
+
+<div id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: contact@bgvexperts.com</p>
+  <p>Phone: +91-9876543210</p>
+</div>
+
+<script>
+  function toggleSection(id) {
+    const sections = ['about', 'services', 'why'];
+    sections.forEach(sec => {
+      document.getElementById(sec).classList.add('hidden');
+    });
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
