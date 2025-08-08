@@ -4,94 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BGV Company - Background Verification</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6fb;
-      color: #222;
-    }
-    header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      padding: 10px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #001133;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #001133;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #007bff;
-    }
-    .section {
-      padding: 60px 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #003366;
-      margin-bottom: 15px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .highlight {
-      color: #007acc;
-      font-weight: bold;
-    }
-    .hidden {
-      display: none;
-    }
-    .nav-btn {
-      padding: 10px 18px;
-      background-color: #001133;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to right, #e0e7ff, #f2f6ff);
-    }
-    .hero h1 {
-      font-size: 40px;
-      color: #001133;
-    }
-    .hero p {
-      font-size: 18px;
-      margin-top: 10px;
-      color: #333;
-    }
-    .card {
-      background-color: #002a5c;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    .card-light {
-      background-color: #ffffff;
-      color: #001133;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -99,19 +12,30 @@
   <div class="logo">BGV Experts</div>
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
+    <a href="#about" onclick="toggleSection('about')">About</a>
+    <a href="#services" onclick="toggleSection('services')">Services</a>
+    <a href="#why" onclick="toggleSection('why')">Why Us</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <div id="home" class="hero">
-  <h1>Background Checks. Turbocharged</h1>
-  <p>We’ve built advanced background solutions to make hiring faster, smarter, and safer.</p>
+  <div class="hero-overlay">
+    <h1>Background Checks. Turbocharged</h1>
+    <p>We’ve built advanced background solutions to make hiring faster, smarter, and safer. Digital Trust Platform Empowering HR managers and service providers through comprehensive Background Verifications (BGV) and checks for ensuring trust and accountability, and for achieving HR/ISO compliance! We provide robust & compliant background check solutions to reduce fraud and build successful relationships based on trust. We are a new Background Verification (BGV) company with deep expertise and years of experience in ensuring trust and reliability for businesses. While our company is new, our team brings a proven track record in delivering accurate, timely, and compliant verification services.</p>
+  </div>
 </div>
 
+
 <div id="about" class="section">
+  <div class="card">
+    <h2>Our Vision</h2>
+    <p>We would like to become the best Background Verification, Profile Check and Investigation Company across the globe with best practices of service Industry in order to achieve our customer satisfaction.</p>
+  </div>
+  <div class="card-light">
+    <h2>Our Mission</h2>
+    <p>FOX I VISION mission is to deliver flawless scrutiny in a fast turnaround time so that next time they think about services, they should think about us.</p>
+  </div>
   <div class="card">
     <p>We value long-term relationships with our employees, so we ensure that our compensation and benefits are highly competitive at every career stage.</p>
   </div>
@@ -120,21 +44,65 @@
   </div>
 </div>
 
+
 <div class="section">
   <h2>Here are some examples of what we offer:</h2>
   <ul>
-    <li><strong>Work-life balance</strong></li>
+    <li><strong>Work-life balance</strong> – Flexible hours and remote work options to support your personal life.</li>
+    <li><strong>Health Benefits</strong> – Comprehensive health insurance plans for you and your family.</li>
+    <li><strong>Career Growth</strong> – Opportunities for training, upskilling, and promotions.</li>
+    <li><strong>Employee Recognition</strong> – Regular appreciation programs and awards for top performers.</li>
+    <li><strong>Inclusive Culture</strong> – A safe, respectful, and diverse workplace for all employees.</li>
+    <li><strong>Team Events</strong> – Fun activities, outings, and team-building events throughout the year.</li>
+    <li><strong>Financial Wellness</strong> – Competitive salaries, bonuses, and retirement benefits.</li>
+    <li><strong>Learning Support</strong> – Sponsorship for certifications and access to online learning platforms.</li>
+    <li><strong>Transparent Communication</strong> – Open feedback channels and regular updates from leadership.</li>
   </ul>
 </div>
 
-<div id="services" class="section hidden">
+
+<section id="services" class="section">
   <h2>Our Core Services</h2>
-  <ul>
-    <li><strong>Employment Verification</strong> – Confirm past work history so you hire with confidence.</li>
-    <li><strong>Address Verification</strong> – Validate residential details for complete accuracy.</li>
-    <li><strong>Identity Verification</strong> – Ensure candidates are exactly who they say they are.</li>
-  </ul>
-</div>
+
+  <div class="services-container">
+    <div class="service-box">
+      <h3>Criminal Record Check</h3>
+      <p>Verify if the candidate has a clean background. Ensure safe and compliant hiring.</p>
+    </div>
+    <div class="service-box">
+      <h3>Education Verification</h3>
+      <p>Confirm degrees and certifications. Hire skilled and qualified professionals.</p>
+    </div>
+    <div class="service-box">
+      <h3>Reference Check</h3>
+      <p>Get insights from past employers or colleagues. Evaluate work ethic and reliability.</p>
+    </div>
+    <div class="service-box">
+      <h3>Global Database Check</h3>
+      <p>Search global watchlists and sanctions. Ensure international compliance.</p>
+    </div>
+    <div class="service-box">
+      <h3>Social Media Screening</h3>
+      <p>Analyze online presence ethically. Assess cultural fit and behavior risks.</p>
+    </div>
+
+    <!-- New Service Boxes -->
+    <div class="service-box">
+      <h3>Address Verification</h3>
+      <p>Verify current and permanent address. Confirm identity and location consistency.</p>
+    </div>
+    <div class="service-box">
+      <h3>Employment History Check</h3>
+      <p>Validate previous work experience. Detect resume discrepancies early.</p>
+    </div>
+    <div class="service-box">
+      <h3>Identity Verification</h3>
+      <p>Confirm national ID, PAN, Aadhaar, and other documents. Prevent identity fraud.</p>
+    </div>
+  </div>
+</section>
+
+
 
 <div id="why" class="section hidden">
   <h2>Why Work With Us?</h2>
@@ -146,11 +114,33 @@
   <p class="highlight">We’re here to make your hiring decisions easier, safer, and smarter. Let’s build trust together.</p>
 </div>
 
-<div id="contact" class="section">
+<section id="contact" class="section">
   <h2>Contact Us</h2>
-  <p>Email: contact@bgvexperts.com</p>
-  <p>Phone: +91-9876543210</p>
-</div>
+  <p>We’d love to hear from you. Reach out via phone, email, or visit us in Noida!</p>
+
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>📍 Address:</strong> Sector 62, Noida, Uttar Pradesh, India</p>
+      <p><strong>📞 Phone:</strong> +91-9876543210</p>
+      <p><strong>📧 Email:</strong> info@example.com</p>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112076.45239168164!2d77.30586928457029!3d28.613895429052264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce58d9cd75f01%3A0x5c2f3a1d3f0ff4d3!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1691542872076!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
 
 <script>
   function toggleSection(id) {
@@ -164,4 +154,10 @@
 </script>
 
 </body>
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 BGV Experts. All rights reserved. | Crafted with care for a safer hiring experience.</p>
+  </div>
+</footer>
+
 </html>
